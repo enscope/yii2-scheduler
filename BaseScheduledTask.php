@@ -68,10 +68,10 @@ namespace enscope\Scheduler
                         $satisfied &= $this->isSchedulePartSatisfied($def, $time->format('H'));
                         break;
                     case 2:
-                        $satisfied &= $this->isSchedulePartSatisfied($def, $time->format('i'));
+                        $satisfied &= $this->isSchedulePartSatisfied($def, $time->format('j'));
                         break;
                     case 3:
-                        $satisfied &= $this->isSchedulePartSatisfied($def, $time->format('j'));
+                        $satisfied &= $this->isSchedulePartSatisfied($def, $time->format('n'));
                         break;
                     case 4:
                         $satisfied &= $this->isSchedulePartSatisfied($def, $time->format('w'));
