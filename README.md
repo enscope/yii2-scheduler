@@ -42,7 +42,7 @@ Tasks are executed in order of definition, as are present in `tasks` array.
 
 **The scheduler itself should be run using CRON or other task scheduler and to allow for the most granularity, it should be run each minute.**
 
-# Scheduled Task Configuration
+## Scheduled Task Configuration
 
 Configuration of scheduled tasks closely follows CRON-like principles.
 The schedule configuration string is 5 part definition in following order:
@@ -58,7 +58,7 @@ You can define intervals using hyphen, e.g. `0 2 * * 1-5` to run the task 2AM on
 you can define cycles using slash, e.g. `*/5 * * * *` to run the task "every five minutes",
 you can specify multiple values separated by comma, e.g. `* 6,12,18 * * *` to run the task every 6 hours except midnight.
 
-# Implementing Custom Tasks
+## Implementing Custom Tasks
 
 All scheduled tasks must implement `ScheduledTaskInterface`, but this interface does not provide actual evaluation of correct time to run the task
 and will run the task every time, the scheduler is run. 
@@ -88,7 +88,7 @@ For most use-cases, it is sufficient to extend abstract `BaseScheduledTask`, whi
 `scheduledTask()`, that needs to be implemented. The class implements `execute(..)` method and evaluates satisfaction
 of the `schedule` automatically, running the task only when the conditions are satisfied (and the task is not forced).
 
-# Exceptions and Error Handling
+## Exceptions and Error Handling
 
 Task can throw any Exception and the Scheduler will handle it, reporting error on error output along with scheduled task name
 and exception message. After reporting the error, Scheduler will continue running other tasks in order as defined. If it is
