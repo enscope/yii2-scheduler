@@ -4,7 +4,7 @@
     "keywords": ["yii2", "extension", "cron", "scheduler"],
     "homepage": "https://github.com/enscope/yii2-scheduler",
     "type": "yii2-extension",
-    "license": "BSD 3-Clause",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Miro Hudak",
