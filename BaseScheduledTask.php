@@ -9,10 +9,10 @@
 namespace enscope\Scheduler
 {
     use yii\base\InvalidConfigException;
-    use yii\base\Object;
+    use yii\base\BaseObject;
 
     abstract class BaseScheduledTask
-        extends Object
+        extends BaseObject
         implements ScheduledTaskInterface
     {
         /** @var string Cron-like schedule specification */
